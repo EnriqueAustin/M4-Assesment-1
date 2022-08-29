@@ -1,12 +1,13 @@
 //import liraries
 import React, { Component } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, Dimensions } from 'react-native';
+import MapView from 'react-native-maps';
 
 // create a component
 const Details = () => {
     return (
         <View style={styles.container}>
-            <Text>Details</Text>
+            <MapView style={styles.map} />
         </View>
     );
 };
@@ -19,6 +20,10 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: '#f4f4f4',
     },
+    map: {
+        width: Dimensions.get('window').width,
+        height: Dimensions.get('window').height,
+      },
 });
 
 //make this component available to the app
